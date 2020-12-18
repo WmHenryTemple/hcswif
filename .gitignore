@@ -2,3 +2,5 @@ output
 *.json
 *.err
 *.out
+*~
+#*
