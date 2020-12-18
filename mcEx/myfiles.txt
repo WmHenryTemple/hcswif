@@ -1,0 +1,3 @@
+/group/shms/wmhenry/mc-single-arm/run_mc_single_arm
+/group/shms/wmhenry/mc-single-arm/src/mc_single_arm
+/group/shms/wmhenry/mc-single-arm/infiles/smallJob.inp

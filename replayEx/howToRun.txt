@@ -1,0 +1,31 @@
+
+From hcswif directory (where hcswif.py is)
+
+**** Replay one SHMS run ****
+source replayEx/onerun.sh
+
+**** Replay many SHMS runs ****
+source replayEx/replayTest_shms.sh
+
+**** Replay many HMS run ****
+source replayEx/replayTest_hms.sh
+
+
+This will create a json file.  To send it to the farm......
+where oneRun is the name of your workflow (or replayTest_shms or replayTest_hms)
+
+******** Check JSON file *********
+cd path/to/hcswif/out_dir
+python -m json.tool oneRun.json
+
+******** Create Workflow *********
+swif import -file oneRun.json
+
+******** Run Workflow *********
+swif run oneRun
+
+******** Check Status *********
+swif list
+
+******** Delete workflow *********
+swif cancel -delete -workflow oneRun
